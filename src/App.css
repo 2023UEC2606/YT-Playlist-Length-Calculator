@@ -1,0 +1,302 @@
+.ytpdc-root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #181818 0%, #232526 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.ytpdc-container {
+  background: rgba(24, 24, 24, 0.98);
+  border-radius: 24px;
+  box-shadow: 0 8px 40px 0 #000a, 0 0 0 2px #ff000033;
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 3rem auto 2rem auto;
+  position: relative;
+  transition: box-shadow 0.3s, border 0.3s;
+  box-sizing: border-box;
+}
+.ytpdc-container:hover {
+  box-shadow: 0 12px 48px 0 #ff000055, 0 0 0 4px #ff000055;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.ytpdc-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.youtube-logo {
+  display: block;
+  margin: 0 auto 0.7rem auto;
+  filter: drop-shadow(0 0 16px #ff0000cc);
+  transition: filter 0.3s, transform 0.3s;
+}
+.youtube-logo:hover {
+  filter: drop-shadow(0 0 32px #ff0000ee);
+  transform: scale(1.08);
+}
+
+.ytpdc-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #fff;
+  background: linear-gradient(90deg, #fff, #ff0000, #fff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+  margin-bottom: 0.2em;
+  text-shadow: 0 2px 16px #ff000055;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.ytpdc-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.ytpdc-row {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.ytpdc-inputs label {
+  font-size: 1.05rem;
+  color: #bbb;
+  margin-bottom: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+.ytpdc-input, .ytpdc-textarea {
+  background: #232526;
+  border: 1.5px solid #333;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  font-size: 1.08rem;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+  margin-top: 0.2rem;
+  box-shadow: 0 1px 4px #0003;
+}
+
+.ytpdc-input:focus, .ytpdc-textarea:focus {
+  border: 1.5px solid #ff4d4d;
+  outline: none;
+  box-shadow: 0 0 0 3px #ff000055;
+  background: #232526ee;
+}
+
+.ytpdc-input:hover, .ytpdc-textarea:hover {
+  border: 1.5px solid #ff0000bb;
+  background: #232526f5;
+}
+
+.ytpdc-textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.ytpdc-analyze-btn {
+  background: linear-gradient(90deg, #ff0000 0%, #ff4d4d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-top: 0.7rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #ff000033;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.ytpdc-analyze-btn:disabled {
+  background: #444;
+  color: #aaa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.ytpdc-analyze-btn:not(:disabled):hover {
+  background: linear-gradient(90deg, #ff4d4d 0%, #ff0000 100%);
+  transform: translateY(-4px) scale(1.07);
+  box-shadow: 0 8px 32px #ff000099, 0 0 12px #ff4d4d99;
+  filter: brightness(1.08) saturate(1.2);
+  border: 1.5px solid #ff4d4d;
+  transition: background 0.18s, transform 0.18s, box-shadow 0.18s, filter 0.18s, border 0.18s;
+}
+
+.ytpdc-error {
+  background: #ff0000cc;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  box-shadow: 0 2px 12px #ff000033;
+  font-size: 1.08rem;
+}
+
+.ytpdc-results {
+  background: #232526ee;
+  border-radius: 14px;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 12px #00000022;
+  border: 1.5px solid #333;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.ytpdc-results h2 {
+  color: #ff4d4d;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.ytpdc-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.13rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.ytpdc-stats span {
+  color: #ff4d4d;
+  font-weight: 700;
+}
+
+.ytpdc-playlists {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.ytpdc-playlist-card {
+  background: #181818;
+  border: 1.5px solid #333;
+  border-radius: 10px;
+  padding: 1.1rem 1.2rem;
+  box-shadow: 0 1px 8px #00000022;
+  transition: border 0.2s, box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.ytpdc-playlist-card:hover {
+  border: 1.5px solid #ff0000;
+  box-shadow: 0 4px 24px #ff000055;
+  transform: scale(1.03) translateY(-2px);
+}
+
+.ytpdc-playlist-card h3 {
+  color: #ff4d4d;
+  font-size: 1.18rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.ytpdc-playlist-card p {
+  margin: 0.13rem 0;
+  color: #eee;
+  font-size: 1.01rem;
+  font-weight: 500;
+}
+
+.ytpdc-footer {
+  margin-top: 2.8rem;
+  text-align: center;
+  color: #bbb;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid #333;
+  padding-top: 1.2rem;
+  background: linear-gradient(90deg, #232526 60%, #181818 100%);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 -2px 12px #00000022;
+}
+
+.ytpdc-footer a {
+  color: #ff4d4d;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.ytpdc-footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.ytpdc-heart {
+  color: #ff4d4d;
+  font-size: 1.1em;
+  animation: heartbeat 1.2s infinite;
+  margin: 0 0.2em;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(1.2); }
+  20%, 40% { transform: scale(0.95); }
+  50% { transform: scale(1.1); }
+  60%, 80% { transform: scale(0.98); }
+  70%, 90% { transform: scale(1.05); }
+}
+
+.ytpdc-optional {
+  color: #aaa;
+  font-size: 0.97em;
+  font-style: italic;
+  margin-left: 0.2em;
+}
+
+@media (max-width: 900px) {
+  .ytpdc-container {
+    max-width: 98vw;
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .ytpdc-header h1 {
+    font-size: 1.5rem;
+  }
+  .ytpdc-results {
+    padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+  }
+  .ytpdc-container {
+    padding: 0.7rem 0.1rem 0.7rem 0.1rem;
+    max-width: 100vw;
+  }
+}
