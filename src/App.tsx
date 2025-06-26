@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-const DEFAULT_API_KEY = 'AIzaSyBf4m_h1koNH3G2GxVqc9xFLrEVaacpyKc';
+const DEFAULT_API_KEY = import.meta.env.VITE_YT_API_KEY || '';
 
 function YouTubeLogo() {
   return (
