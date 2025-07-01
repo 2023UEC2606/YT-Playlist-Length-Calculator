@@ -239,7 +239,7 @@ const App: React.FC = () => {
               </div>
             </div>
             <div className="ytpdc-playlists">
-              {results.map((playlist, idx) => (
+              {results.map((playlist) => (
                 <div className="ytpdc-playlist-card" key={playlist.id}>
                   <h3>{playlist.title}</h3>
                   <p><b>Channel:</b> {playlist.channelTitle}</p>
