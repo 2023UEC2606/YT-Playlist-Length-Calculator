@@ -357,6 +357,24 @@ body {
   border: 1px solid #333;
 }
 
+.video-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.video-link:hover {
+  background: #1f1f1f;
+  border-color: #555;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.1);
+}
+
+.video-link:active {
+  transform: translateY(0px);
+}
+
 .video-thumbnail {
   width: 120px;
   height: 90px;

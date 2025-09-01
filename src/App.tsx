@@ -403,13 +403,19 @@ const App: React.FC = () => {
                       <h4>Videos in Range:</h4>
                       <div className="videos-container">
                         {playlist.videos.map((video) => (
-                          <div className="video-item" key={video.id}>
+                          <a 
+                            href={`https://www.youtube.com/watch?v=${video.id}`} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="video-item video-link" 
+                            key={video.id}
+                          >
                             <img src={video.thumbnail} alt={video.title} className="video-thumbnail" />
                             <div className="video-info">
                               <div className="video-title">{video.title}</div>
                               <div className="video-duration">{video.duration}</div>
                             </div>
-                          </div>
+                          </a>
                         ))}
                       </div>
                     </div>
